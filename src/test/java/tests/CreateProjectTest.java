@@ -20,7 +20,7 @@ public class CreateProjectTest extends BaseTest {
     @Test
     public void checkCreateNewProject() {
         loginPage.login(User.oleg().login(), User.oleg().password());
-        projectsPage.createNewProject(PROJECT_NAME,PROJECT_CODE);
+        projectsPage.createNewProject(PROJECT_NAME, PROJECT_CODE);
         $(byText(PROJECT_NAME)).shouldBe(visible);
         projectsPage.deleteProject(PROJECT_NAME);
     }

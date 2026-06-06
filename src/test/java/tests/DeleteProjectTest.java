@@ -22,7 +22,7 @@ public class DeleteProjectTest extends BaseTest {
     @Test
     public void checkDeleteProject() {
         loginPage.login(User.oleg().login(), User.oleg().password());
-        projectsPage.createNewProject(PROJECT_NAME,PROJECT_CODE);
+        projectsPage.createNewProject(PROJECT_NAME, PROJECT_CODE);
         projectsPage.openProjectPage();
         projectsPage.deleteProject(PROJECT_NAME);
         projectsPage.openProjectPage();

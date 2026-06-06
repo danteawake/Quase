@@ -1,9 +1,11 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class ProjectsPage {
 
@@ -19,7 +21,7 @@ public class ProjectsPage {
         open("projects");
     }
 
-    public void createNewProject(String projectName,String projectCode) {
+    public void createNewProject(String projectName, String projectCode) {
         createNewProjectBtn.shouldBe(visible).click();
         projectNameInput.setValue(projectName);
         projectCodeInput.setValue(projectCode);
